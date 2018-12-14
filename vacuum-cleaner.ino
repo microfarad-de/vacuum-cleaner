@@ -24,7 +24,7 @@
 // the current flow constant at all loads.
 // 
 // Author:  Karim Hraibi
-// Version: 0.1.0
+// Version: 1.0.0
 // Date:    19.11.2017
 //
 #define VERSION_MAJOR 1  // major version
