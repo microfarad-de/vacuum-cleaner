@@ -23,3 +23,5 @@ For reference:
 
 * Hobby Wing ESC is configured to run at 30000 RPM / 6 Amperes. 
   No current increase when loading the motor, the ESC keeps the current flow constant at all loads.
+
+Unless stated otherwise inside the source file headers, please feel free to use and distribute this code under the *GNU General Public License v3.0*.
