@@ -1,35 +1,56 @@
-//
-// Brushless Vaccum Cleaner Controller
-//
-// Brushless motor upgrade for the "Balck&Decker DustBuster Flexi"
-// vacuum cleaner.
-// This sketch controls the Brushless ESC by simulating the behavior 
-// of a RC receiver. 
-// The throttle is set to minimum for a preset amount of time to 
-// allow the ESC to arm. The power is then slowly ramped-up until 
-// reaching the target operating power setting.
-// This sketch also controls a MOSFET module that keeps the ESC armed
-// for a preset amount of time (5 min) after the power switch has been
-// toggled to off.
-//
-// For reference:
-// RPM and current measurement of original brushed motor
-// with impeller attached and vacuum chamber removed:
-// 28990 RPM / 5 Amperes
-// Loading the motor would result in increased current draw.
-//
-// Hobby Wing ESC is configured to run at:
-// 30000 RPM / 6 Amperes
-// No current increase when loading the motor, the ESC keeps
-// the current flow constant at all loads.
-// 
-// Author:  Karim Hraibi
-// Version: 1.0.0
-// Date:    19.11.2017
-//
+/* 
+ * Brushless Vaccum Cleaner Controller
+ *
+ * Brushless motor upgrade for the "Balck&Decker DustBuster Flexi"
+ * vacuum cleaner.
+ * This sketch controls the Brushless ESC by simulating the behavior 
+ * of a RC receiver. 
+ * The throttle is set to minimum for a preset amount of time to 
+ * allow the ESC to arm. The power is then slowly ramped-up until 
+ * reaching the target operating power setting.
+ * This sketch also controls a MOSFET module that keeps the ESC armed
+ * for a preset amount of time (5 min) after the power switch has been
+ * toggled to off.
+ *
+ * For reference:
+ * RPM and current measurement of original brushed motor
+ * with impeller attached and vacuum chamber removed:
+ * 28990 RPM / 5 Amperes
+ * Loading the motor would result in increased current draw.
+ *
+ * Hobby Wing ESC is configured to run at:
+ * 30000 RPM / 6 Amperes
+ * No current increase when loading the motor, the ESC keeps
+ * the current flow constant at all loads.
+
+ * This source file is part of the Brushless Vacuum Cleaner Arduino firmware
+ * found under http://www.github.com/microfarad-de/vacuum-cleaner
+ * 
+ * Please visit:
+ *   http://www.microfarad.de
+ *   http://www.github.com/microfarad-de
+ * 
+ * Copyright (C) 2019 Karim Hraibi (khraibi at gmail.com)
+ * 
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * 
+ * Version: 1.0.1
+ * Date:    January 2019
+ */
 #define VERSION_MAJOR 1  // major version
 #define VERSION_MINOR 0  // minor version
-#define VERSION_MAINT 0  // maintenance version
+#define VERSION_MAINT 1  // maintenance version
 
 
 #include <Servo.h>
