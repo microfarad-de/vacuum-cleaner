@@ -25,3 +25,13 @@ For reference:
   No current increase when loading the motor, the ESC keeps the current flow constant at all loads.
 
 Unless stated otherwise within the source file headers, please feel free to use and distribute this code under the *GNU General Public License v3.0*.
+
+## Prerequisites
+
+* ATmega328P based Arduino Pro Mini, Arduino Nano or similar model
+* Custom bootloader from: https://github.com/microfarad-de/bootloader
+
+## Circuit Diagram
+
+The circuit diagram for this device can be found under the */doc* folder or can be downloaded using the follwoing link:
+https://github.com/microfarad-de/vacuum-cleaner/raw/master/doc/circuit-diagram.pdf
